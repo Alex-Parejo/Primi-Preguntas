@@ -1518,6 +1518,12 @@ section {
 @media (max-width: 1023px) {
   
   .main-header {
+    display: block;
+    position: sticky;
+    top: 0;
+  }
+
+  .main-nav {
     display: none;
   }
 
@@ -1526,16 +1532,8 @@ section {
   }
 
   .hero-section {
-    padding: 40px 16px 16px;
+    padding: 30px 16px 16px;
     position: relative;
-  }
-
-  /* Posicionar el toggle flotante arriba a la derecha en móvil */
-  .hero-section .theme-toggle-btn {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    z-index: 50;
   }
 
   .hero-title {
@@ -1546,6 +1544,20 @@ section {
   .hero-subtitle {
     font-size: 0.95rem;
     margin-bottom: 28px;
+  }
+
+  .search-wrapper {
+    padding: 4px 4px 4px 12px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    min-height: 36px;
+  }
+
+  .search-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 
   /* Ocultar el layout del Bento de Desktop en Móvil */
@@ -1569,19 +1581,18 @@ section {
   }
 
   .bento-item {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid var(--border-glass);
-    border-bottom: 1px solid var(--border-glass);
-    padding: 24px 16px;
-    background: transparent;
-    box-shadow: none;
+    border-radius: 20px;
+    border: 1px solid var(--border-glass);
+    padding: 20px;
+    background: var(--surface-glass);
+    box-shadow: var(--shadow-card);
+    margin: 16px 16px 80px; /* Margen inferior para evitar que el bottom tab bar lo tape */
   }
 
   .glow-card:hover {
     box-shadow: none;
     background: transparent;
+    transform: none;
   }
 
   .timer-visual-wrapper {
@@ -1885,6 +1896,29 @@ section {
     text-align: left;
     padding: 20px 32px;
     gap: 24px;
+  }
+}
+
+/* ==========================================================================
+   NARROW VIEWPORT OPTIMIZATIONS (Smartphones <= 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px 16px;
+  }
+  .img-logo-unimagdalena, .img-logo-talento {
+    height: 38px;
+    width: 38px;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+  }
+  .brand-subtitle {
+    font-size: 0.65rem;
+  }
+  .bento-item {
+    margin: 12px 12px 80px;
+    padding: 16px;
   }
 }
 

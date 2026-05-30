@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Primi-Preguntas</string>
+    <string name="title_activity_main">Primi-Preguntas</string>
+    <string name="package_name">com.unimagdalena.primipreguntas</string>
+    <string name="custom_url_scheme">com.unimagdalena.primipreguntas</string>
+</resources>
